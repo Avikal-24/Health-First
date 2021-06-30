@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Disease Predictor</title>
+</head>
+<body>
+
+<h1>Disease Predictor</h1>
+
+<p>Select your symptoms:</p>
+
+<form action="{{url_for('predict')}}" method="post">  <!-- specifies what action to perform on pressing submit -->
+  <label for="S1">Symptom1:</label>
+  <select name="Symptom1" id="S1" > <!--name creates a variable name by which the selected value will be identified-->
+    <option value="chest_pain" >chest_pain</option>
+    <option value="drying_and_tingling_lips">drying_and_tingling_lips</option>
+    <option value="dizziness">dizziness</option>
+    <option value="family_history">family_history</option>
+    <option value="fluid_overload">fluid_overload</option>
+  </select>
+
+  <label for="Symptom2">Symptom2:</label>
+  <select name="Symptom2" id="Symptom2">
+    <option value="chest_pain">chest_pain</option>
+    <option value="drying_and_tingling_lips">drying_and_tingling_lips</option>
+    <option value="dizziness">dizziness</option>
+    <option value="family_history">family_history</option>
+    <option value="fluid_overload">fluid_overload</option>
+  </select>
+
+  <label for="Symptom3">Symptom3:</label>
+  <select name="Symptom3" id="Symptom3">
+    <option value="chest_pain">chest_pain</option>
+    <option value="drying_and_tingling_lips">drying_and_tingling_lips</option>
+    <option value="dizziness">dizziness</option>
+    <option value="family_history">family_history</option>
+    <option value="fluid_overload">fluid_overload</option>
+  </select>
+
+  <label for="Symptom4">Symptom4:</label>
+  <select name="Symptom4" id="Symptom4">
+    <option value="chest_pain">chest_pain</option>
+    <option value="drying_and_tingling_lips">drying_and_tingling_lips</option>
+    <option value="dizziness">dizziness</option>
+    <option value="family_history">family_history</option>
+    <option value="fluid_overload">fluid_overload</option>
+  </select>
+
+      <label for="Symptom5">Symptom5:</label>
+  <select name="Symptom5" id="Symptom5">
+    <option value="chest_pain">chest_pain</option>
+    <option value="drying_and_tingling_lips">drying_and_tingling_lips</option>
+    <option value="dizziness">dizziness</option>
+    <option value="family_history">family_history</option>
+    <option value="fluid_overload">fluid_overload</option>
+  </select>
+
+  <br>
+  <br>
+  <input type="submit" value="Submit">
+
+</form>
+
+<p>Click the "Submit" button and the form-data will be sent to the ml model".</p>
+ <br>
+ <br>
+   {{prediction_text}} <!--this will be obtained from flask file -->
+
+</body>
+</html>
